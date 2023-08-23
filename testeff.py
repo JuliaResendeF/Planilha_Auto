@@ -9,15 +9,11 @@ conteudo_procurado = int(input("Digite o cod "))
 planilha=wb["VIVO"]
 
 
-
-
-
 for i in planilha.iter_rows():
     for celula in i:
         if celula.value == conteudo_procurado:
             celula_encontrada = celula
             break
-
 
 
 def Insert_Values(cod,conteudo_preencher):
