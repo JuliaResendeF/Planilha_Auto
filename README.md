@@ -4,3 +4,4 @@
 - [ ] data atual automatica com ok e vencimento
 - [ ] Formatação dos scripts
 - [ ] Atualizar local do arquivo
+- [ ] formatar a data inserida automaticamente
