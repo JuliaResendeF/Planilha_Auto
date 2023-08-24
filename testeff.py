@@ -1,5 +1,6 @@
 import openpyxl 
 from openpyxl import load_workbook
+import datetime 
 
 exel_file = r"C:\Users\PMC\Desktop\exel project\TABELA_python.xlsx"
 wb = load_workbook(exel_file)
@@ -31,6 +32,16 @@ def Insert_Values(cod,conteudo_preencher):
 
 Cod = celula_encontrada.row
 value = input("Digite a data ")
+
+data = datetime.date.today()
+
+
+if data.month < 10:
+    month = '0' + str(data.month)
+else:
+    month = str(data.month)
+    
+value = 'OK '+str(data.day)+'/'+ month +'  ' + value
 Insert_Values(Cod,value)
 value = input("Digite o valor ")
 Insert_Values(Cod,value)        
