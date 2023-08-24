@@ -16,7 +16,6 @@ for i in planilha.iter_rows():
             celula_encontrada = celula
             break
 
-
 def Insert_Values(cod,conteudo_preencher):
     numero_linha = cod
     linha = planilha[numero_linha]
@@ -35,7 +34,6 @@ value = input("Digite a data ")
 
 data = datetime.date.today()
 
-
 if data.month < 10:
     month = '0' + str(data.month)
 else:
@@ -45,7 +43,10 @@ value = 'OK '+str(data.day)+'/'+ month +'  ' + value
 Insert_Values(Cod,value)
 value = input("Digite o valor ")
 Insert_Values(Cod,value)        
-            
+
+Ficha= 'A'
+conteudo_coluna_desejada = planilha[f'{Ficha}{celula_encontrada.row}'].value
+print(conteudo_coluna_desejada)
 wb.save(exel_file)
 
 
