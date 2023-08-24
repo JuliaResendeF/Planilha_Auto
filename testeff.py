@@ -2,7 +2,7 @@ import openpyxl
 from openpyxl import load_workbook
 import datetime 
 
-exel_file = r"C:\Users\PMC\Desktop\exel project\TABELA_python.xlsx"
+exel_file = r"TABELA_python.xlsx"
 wb = load_workbook(exel_file)
 
 celula_encontrada = None
