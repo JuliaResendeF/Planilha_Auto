@@ -2,12 +2,12 @@ import openpyxl
 from openpyxl import load_workbook
 import datetime 
 
-exel_file = r"TABELA_python.xlsx"
+exel_file = r"Contas.xlsx"
 wb = load_workbook(exel_file)
 
 celula_encontrada = None
 conteudo_procurado = int(input("Digite o cod "))
-planilha=wb["VIVO"]
+planilha=wb["CPFL"]
 
 
 for i in planilha.iter_rows():
@@ -38,10 +38,13 @@ if data.month < 10:
     month = '0' + str(data.month)
 else:
     month = str(data.month)
+
     
 value = 'OK '+str(data.day)+'/'+ month +'  ' + value
 Insert_Values(Cod,value)
-value = input("Digite o valor ")
+value = int(input("Digite o valor "))
+tax = int(input("Digite o imposto"))
+value =  value + tax
 Insert_Values(Cod,value)        
 
 Ficha= 'A'
