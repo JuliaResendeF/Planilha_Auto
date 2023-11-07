@@ -41,12 +41,19 @@ def AutoXLSX(conteudo_procurado, Vencimento_date,valor, tax):
     date = PresentDate()
     value = 'OK '+str(date.day)+'/'+ str(date.month) +'  ' + Vencimento_date
     Insert_Values(Cod,value)
-    value =  valor + tax
+    value =  int(valor) + int(tax)
     Insert_Values(Cod,value)        
+    wb.save(exel_file)
+
+def ficha(conteudo_procurado):
+    celula = FindLine(conteudo_procurado,None)
     Ficha= 'A'
     conteudo_coluna_desejada = planilha[f'{Ficha}{celula.row}'].value
-    print(conteudo_coluna_desejada)
-    wb.save(exel_file)
+    
+    return conteudo_coluna_desejada
+    
+
+
 
 
 

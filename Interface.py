@@ -29,3 +29,6 @@ while True:
          tax=values['-TAX-']
          sa.AutoXLSX(cod,vencimento,valor,tax)
          
+         Ficha = sa.ficha(cod)
+        
+         sg.popup("Salvo com sucesso","Ficha:",Ficha)
